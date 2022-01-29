@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Practico2v2</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="eliminar">Eliminar</string>
+    <string name="categorianame">[CategoriaName]</string>
+    <string name="deleteplato">DeletePlato</string>
+    <string name="new_app_name">Restaurants</string>
+</resources>

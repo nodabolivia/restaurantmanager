@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.cursoandroid.practico2v2.ui.fragments.MainFragment"
+        android:label="Restaurantes"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_detail_restaurante"
+            app:destination="@id/detalleRestauranteFragment" />
+        <action
+            android:id="@+id/action_add_restaurante"
+            app:destination="@id/formRestauranteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/formRestauranteFragment"
+        android:name="com.cursoandroid.practico2v2.ui.fragments.FormRestauranteFragment"
+        android:label="Agregar restaurante"
+        tools:layout="@layout/fragment_form_restaurante">
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/formCategoriaFragment"
+        android:name="com.cursoandroid.practico2v2.ui.fragments.FormCategoriaFragment"
+        android:label="Agregar categoria"
+        tools:layout="@layout/fragment_form_categoria">
+
+
+        <argument
+            android:name="currentRestaurante"
+            app:argType="com.example.gestorrestaurantes.dal.models.Restaurante" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleRestauranteFragment"
+        android:name="com.cursoandroid.practico2v2.ui.fragments.DetalleRestauranteFragment"
+        android:label="Detalle de restaurante"
+        tools:layout="@layout/fragment_detalle_restaurante">
+
+
+        <action
+            android:id="@+id/action_edit_restaurante"
+            app:destination="@id/formRestauranteUpdateFragment" />
+        <action
+            android:id="@+id/action_detail_categoria"
+            app:destination="@id/detalleCategoriaFragment" />
+        <action
+            android:id="@+id/action_add_categoria"
+            app:destination="@id/formCategoriaFragment" />
+        <argument
+            android:name="currentRestaurante"
+            app:argType="com.example.gestorrestaurantes.dal.models.Restaurante" />
+    </fragment>
+    <fragment
+        android:id="@+id/formCategoriaUpdateFragment"
+        android:name="com.cursoandroid.practico2v2.ui.fragments.FormCategoriaUpdateFragment"
+        android:label="Actualizar categoria"
+        tools:layout="@layout/fragment_form_categoria_update">
+
+        <argument
+            android:name="currentCategoria"
+            app:argType="com.example.gestorrestaurantes.dal.models.Categoria" />
+    </fragment>
+    <fragment
+        android:id="@+id/formRestauranteUpdateFragment"
+        android:name="com.cursoandroid.practico2v2.ui.fragments.FormRestauranteUpdateFragment"
+        android:label="Actualizar restaurante"
+        tools:layout="@layout/fragment_form_restaurante_update">
+
+        <argument
+            android:name="currentRestaurante"
+            app:argType="com.example.gestorrestaurantes.dal.models.Restaurante" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleCategoriaFragment"
+        android:name="com.cursoandroid.practico2v2.ui.fragments.DetalleCategoriaFragment"
+        android:label="Detalle de la categoria"
+        tools:layout="@layout/fragment_detalle_categoria">
+
+        <action
+            android:id="@+id/action_add_plato"
+            app:destination="@id/formPlatoFragment" />
+        <action
+            android:id="@+id/action_detail_plato"
+            app:destination="@id/detallePlatoFragment" />
+        <action
+            android:id="@+id/action_edit_categoria"
+            app:destination="@id/formCategoriaUpdateFragment" />
+        <argument
+            android:name="currentCategoria"
+            android:defaultValue="@null"
+            app:argType="com.example.gestorrestaurantes.dal.models.Categoria"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/formPlatoFragment"
+        android:name="com.cursoandroid.practico2v2.ui.fragments.FormPlatoFragment"
+        android:label="Agregar plato"
+        tools:layout="@layout/fragment_form_plato">
+        <argument
+            android:name="currentCategoria"
+            app:argType="com.example.gestorrestaurantes.dal.models.Categoria" />
+    </fragment>
+    <fragment
+        android:id="@+id/formPlatoUpdateFragment"
+        android:name="com.cursoandroid.practico2v2.ui.fragments.FormPlatoUpdateFragment"
+        android:label="Actualizar plato"
+        tools:layout="@layout/fragment_form_plato_update" >
+        <argument
+            android:name="currentPlato"
+            app:argType="com.example.gestorrestaurantes.dal.models.Plato" />
+    </fragment>
+    <fragment
+        android:id="@+id/detallePlatoFragment"
+        android:name="com.cursoandroid.practico2v2.ui.fragments.DetallePlatoFragment"
+        android:label="Detalles del plato"
+        tools:layout="@layout/fragment_detalle_plato" >
+        <action
+            android:id="@+id/action_edit_plato"
+            app:destination="@id/formPlatoUpdateFragment" />
+        <argument
+            android:name="currentPlato"
+            app:argType="com.example.gestorrestaurantes.dal.models.Plato" />
+    </fragment>
+</navigation>

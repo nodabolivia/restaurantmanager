@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.FormPlatoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:foregroundTint="@color/black"
+            android:text="Formulario - Nuevo plato"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/imgSelectPla"
+            android:layout_width="300sp"
+            android:layout_height="200sp"
+            android:src="@drawable/placeholder" />
+
+        <TextView
+            android:id="@+id/textView78772"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:foregroundTint="@color/black"
+            android:text="Nombre"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/txtNombrePla"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:ems="10"
+            android:foregroundTint="@color/black"
+            android:hint="[Nombre]"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            android:textColorHint="#673AB7"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/textView7444222"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:foregroundTint="@color/black"
+            android:text="Descripcion"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/txtDescripcionPla"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:ems="10"
+            android:foregroundTint="@color/black"
+            android:hint="[Descripcion del plato]"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            android:textColorHint="#673AB7"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnAddPlato"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:text="Guardar datos" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
